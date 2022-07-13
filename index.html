@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+  <title> QUESTION</title>
+</head>
+<body>
+<div class="spoiler">
+  <input type="checkbox" id="q1" name="" value="">
+  <label for="q1"><span></span>Свойствa display</label>
+  <div class="">
+    <p>Основные свойства: block; inline-block; flex; inline; grid </p>
+
+    <div class="it it1">inline</div>
+    <div class="it it2">inline</div>
+    <div class="it it3">inline</div>
+    <div class="flex">
+      <div class="it it4">flex</div>
+      <div class="it it5">flex</div>
+      <div class="it it6">flex</div>
+    </div>
+
+    <p>для таблицы display:table;  table-row; table-cell;table-caption; table-column-group; table-column;
+    <br>  table-row-group; table-header-group; table-footer-group;
+   </p>
+   <p>
+Если углубляться еще дальше, то свойство display отвечает за 2 вещи: <br>
+1) Внешний тип отображение - какой бокс будет отрисован в нормальном потоке документа. <br>
+  Всего тут есть два варианта: блочный (block, table, flex, grid и т.д.), <br>
+ либо строчный (inline-block, inline-table, inline-flex, inline-grid и т.д.). Либо не отрисован вовсе (contents, none) <br>
+2) Внутренний контекст элемента - раскладка для дочерних элементов. Изначально она у всех flow - нормальный поток. <br>
+И соответственно у table - табличный макет, у flex - гибкий макет, у grid - сеточный и т.д.</p>
+  </div>
+</div>
+<div class="spoiler">
+  <input type="checkbox" id="q2" name="" value="">
+  <label for="q2"><span></span>Для чего нужно ключевое слов @keyframes</label>
+  <div class="">
+    <p>keyframes определяет ключевые кадры по которым будет работать анимация </p>
+<div class="table">
+  <div class="row">
+    <div class="cell">
+      <pre>
+@keyframes rotate {
+   from{
+    transform: rotateX(0deg);
+     }
+   to
+   {transform: rotateX(569deg);}
+      }</pre>
+    </div>
+    <div class="cell2">
+      <pre>
+  .squer {width: 100px;
+    height: 100px;
+    background-color: grey;
+    margin: 100px;
+    animation: rotate 1s infinite;}</pre>
+    </div>  </div></div>
+    <div class="squer">  </div>
+  </div>
+</div>
+
+<div class="spoiler">
+  <input type="checkbox" id="q3" name="" value="">
+  <label for="q3"><span></span>position</label>
+  <div class="">
+    <p>position: <br> absolute позируется относительно ближайщего спозицианированного элемента
+    fixed элемент закрепляется на экране и прокручивается вместе со страницей <br>
+    sticky наподобее fixed но предназначен для закрепления внутри блока
+   </p>
+   <div class="q3div">
+     <div class="stat">1static</div>
+      <div class="abs">2absolute</div>
+     <div class="rel">3relative</div>
+     <div class="fix">4fixed</div>
+     <div class="stic">5sticky</div>
+   </div>
+
+    </div>
+  </div>
+  <div class="spoiler">
+    <input type="checkbox" id="q4" name="" value="">
+    <label for="q4"><span></span> Как бы вы реализовали кастомный чек бокс?</label>
+    <div class="description">
+      Чтобы стилизовать чекбокс создается label указывается id самого чекбокса;<br>
+      Затем для этого label пишутся стили(label:height:50px;width:50px;border-radius:50% background-color:black), <br>
+      которыми должен обладать сам чекбокс,  а сам инпут мы скрываем input{opacity:0;} или display:none; <br>
+
+      далее нам надо отслеживать нажат с=чекбокс или нет (input:checked + label{background-color: red;})
+    </div>
+    <div class="check">
+      <input type="checkbox" id="cb" name="" value="" > &nbsp; &nbsp; &nbsp;
+      <label for="cb"></label>
+    </div>
+
+    </div>
+
+
+  <div class="spoiler">
+    <input type="checkbox" id="q5" name="" value="">
+    <label for="q5"><span></span>Как от центровать блок по горизонтали и вертикали?</label>
+<div class="">
+  У родителя указать данные стили
+  <pre>
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+    </pre>
+</div>
+</div>
+
+  <div class="spoiler">
+    <input type="checkbox" id="q6" name="" value="">
+    <label for="q6"><span></span>Что делает box-sizing: border-box?</label>
+    <div class="">
+    Указав данный стиль размер бокса будет окончательным с учетом бордера и паддинга;
+    <div class="box6">
+    </div>
+      </div>
+    </div>
+
+  <div class="spoiler">
+    <input type="checkbox" id="q7" name="" value="">
+    <label for="q7"><span></span> Как обрабатывает WEB страницу браузер?</label>
+    <div class="">
+    <img class="q7img" src="images/q7.png" alt="" width="100%">
+      </div>
+  </div>
+  <div class="spoiler">
+    <input type="checkbox" id="q8" name="" value="">
+    <label for="q8"><span></span> Что такое inline стили? Каков их приоритет</label>
+    <div class="">
+  Это стили написанные в html,<br> exemple: body style="color:red"> - вес максимальный 1000
+      </div>
+  </div>
+  <div class="spoiler">
+    <input type="checkbox" id="q9" name="" value="">
+    <label for="q9"><span></span>Чем отличается border от outline?</label>
+    <div class="">
+  border это часть блочного элемента, а outline просто визуальная составляющая. У которой нельзя сделать радиус
+<div class="bor">
+  border
+</div>
+
+<div class="vis">
+  outline
+</div></div></div>
+
+<div class="spoiler">
+  <input type="checkbox" id="q10" name="" value="">
+  <label for="q10"><span></span> Адаптивная верстка и ее методы</label>
+  <div class="">
+<img class="q10img" src="images/q10.png" alt="" width="100%">
+    </div>  </div>
+
+    <div class="spoiler">
+      <input type="checkbox" id="q11" name="" value="">
+      <label for="q11"><span></span>  Что такое БЭМ?</label>
+      <div class="">
+    <img class="q11img" src="images/q11.png" alt="" width="80%">
+    <p>БЭМ метадлология которая расшифровывается блок элемент модификатор, которая пропагандирует
+    компанентный процесс веб разработки. В его основе лежжит прицип разделения интерфейса на
+  независемые блоки, которые можно повторно ипользовать без копи паста</p>
+        </div>  </div>
+
+  <div class="spoiler">
+  <input type="checkbox" id="q12" name="" value="">
+    <label for="q12"><span></span> Как при нажатии на ссылку открывать окно в новом окне?</label>
+    <div class="">
+  a href="#"  target="_blank" < /a>
+      </div>  </div>
+
+  <div class="spoiler">
+    <input type="checkbox" id="q13" name="" value="">
+    <label for="q13"><span></span> В чем различие между строчными и блочными элементами? </label>
+    <div class="">
+      Строчные элементы занимают одну строку а блочные всю свободную ширину
+      </div>  </div>
+
+  <div class="spoiler">
+    <input type="checkbox" id="q14" name="" value="">
+    <label for="q14"><span></span> Разница между marginи padding? </label>
+    <div class="">
+margin внешние отступы.<br>
+padding внутренние отступы.
+      </div>  </div>
+
+ <div class="spoiler">
+   <input type="checkbox" id="q15" name="" value="">
+   <label for="q15"><span></span> Что такое семантические элементы и для чего они нужны?</label>
+   <div class="">
+  <p>Семантические теги определяют конкретные части страницы.Используют для лучшей индексации страницы</p>
+ <img class="q15img" src="images/q15.png" alt="" width="90%">
+     </div>  </div>
+
+  <div class="spoiler">
+    <input type="checkbox" id="q16" name="" value="">
+    <label for="q16"><span></span>Свойство overflow, что делает и когда использовать? </label>
+    <div class="">
+  Свойство  overflow или overflow-x или overflow-y управляет прокруткой в случае если элемент не помещается на страницу. <br>
+   &nbsp; &nbsp; overflow: auto; в случае переполнения появляется прокрутка <br>
+   &nbsp; &nbsp; overflow: hiden; излишек не выводится   <br>
+   &nbsp; &nbsp; overflow: scroll; полоы прокрутки есть всегда <br>
+   &nbsp; &nbsp; overflow: visable; излишек все равно выводится(по умолчанию)
+      </div>  </div>
+
+  <div class="spoiler">
+    <input type="checkbox" id="q17" name="" value="">
+    <label for="q17"><span></span>vh vw размеры</label>
+    <div class="">
+    1vh- 1% от высоты окна браузера <br>
+     1vw- 1% от ширины окна браузера
+      </div>  </div>
+
+  <div class="spoiler">
+    <input type="checkbox" id="q18" name="" value="">
+    <label for="q18"><span></span>Как визуально изменить курсор?</label>
+    <div class="">
+    Eсть довольно много модификаций курсора см MDN, к любому блоку можно добавить свой вид курсора. <br>
+  в css: cursor:    help; wait; crosshair; not-allowed; zoom-in;итд
+    </div>  </div>
+
+  <div class="spoiler">
+    <input type="checkbox" id="q19" name="" value="">
+    <label for="q19"><span></span> Как изменить направление оси Flexbox контейнера?</label>
+<div class="">
+  <p>Виды напрвлений: flex-direction: row;  &nbsp; flex-direction: row-reverse;  &nbsp;flex-direction: column; &nbsp; flex-direction: column-reverse;</p>
+  <div class="qdiv">
+
+    <div class="it">flex-direction: row;</div>
+    <div class="it">flex-direction: row;</div>
+    <div class="it">flex-direction: row;</div>
+    </div>  </div>
+</div>
+
+
+<div class="spoiler">
+  <input type="checkbox" id="q20" name="" value="">
+  <label for="q20"><span></span>Из чего строится размер элемента?</label>
+  <div class="">
+<p>Pазмер элемента строится из васоты, ширины элемента, внутренних отступов, рамки и внешних отступов</p>
+<img class="q20img" src="images/q20.png" alt="" width="80%">
+    </div>  </div>
+
+<div class="spoiler">
+    <input type="checkbox" id="q21" name="" value="">
+    <label for="q21"><span></span> За что отвечает z-index?</label>
+    <div class="">
+      <p>z-index влияет только на позиционированные элементы</p>
+     <img src="images/q21.png" alt="" >
+    </div>  </div>
+
+  <div class="spoiler">
+    <input type="checkbox" id="q22" name="" value="">
+    <label for="q22"><span></span> Какие виды input бывают? </label>
+    <div class="">
+
+        <caption>type=""</caption>
+<div class="">
+  <img class="q22img" src="images/q22.png" alt="" width="100%">
+  <img class="q22img" src="images/q22.1.png" alt="" width="100%">
+</div>
+
+      </div>  </div>
+
+  <div class="spoiler">
+<input type="checkbox" id="q23" name="" value="">
+  <label for="q23"><span></span>За что отвечает justify-content и align-tiems у flexbox контейнера? </label>
+  <div class="">
+<p>justify-content влияет на расположение относительно главой оси flex-direction<br>
+параметры justify-content: center; space-between  ; space-around;  flex-start;   flex-end; </p>
+<p>align-tiems влияет на расположение относительно второстепенной оси. Параметры
+align-items: baseline; center; flex-end;  flex-start; stretch;</p>
+<img class="q23img" src="images/q23.png" alt="" width="100%">
+
+      </div>  </div>
+<div class="spoiler">
+    <input type="checkbox" id="q24" name="" value="">
+    <label for="q24"><span></span>   Как убрать маркер у списка?</label>
+    <div class="">
+      <p>ul{list-style: none;}<br>
+      варианты circle;  disc; decimal; upper-roman; итд</p>
+    </div>  </div>
+
+<div class="spoiler">
+    <input type="checkbox" id="q25" name="" value="">
+    <label for="q25"><span></span> Что вы знаете о приоритете селекторов?</label>
+    <div class="tq25">
+      <table>
+        <tr>
+          <th>Вид селектора</th>
+          <th>Приоритет</th>
+        </tr>
+        <tr>
+          <td>Селектор тега</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>Селектор класса</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Селектор Id</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td>Inline style</td>
+          <td>1000</td>
+        </tr>
+      </table>
+    </div>  </div>
+
+<div class="spoiler">
+    <input type="checkbox" id="q26" name="" value="">
+    <label for="q26"><span></span> Что такое псевдоклассы?</label>
+    <div class="">
+      <p>Псевдоклассы предназначенны для описания характеристик элементов такое, как динамическое состояние например нажатая ссылка <br>
+      самые часто используемые hover checked disabled</p>
+     <img  src="images/q26.png" alt="">
+        <img src="images/q26.1.png" alt="">
+    </div>  </div>
+
+<div class="spoiler">
+    <input type="checkbox" id="q27" name="" value="">
+    <label for="q27"><span></span>  Какие бывают значение у background-size?</label>
+    <div class="">
+      <p>background-size:cover- сохраняет пропорции но изменяется в размере чтобы уместитья в блок(часть изображения может обрезаться)</p>
+     <p>background-size:contain - ужимает картинку до тех пор пока она не вместится в блок, если картинка будет прямоугольная а блок квадратный <br>
+     нужно буде написать background-repeat: no-repeat;</p>
+     <p>background-size: 30%; обычный размер  </p>
+    </div>  </div>
+
+<div class="spoiler">
+  <input type="checkbox" id="q28" name="" value="">
+  <label for="q28"><span></span>Какие псевдоэлементы вы знаете?</label>
+  <div class=""><pre>
+::after ;            ::first-letter
+::backdrop;          ::first-line
+::before;            ::file-selector-button
+::cue ;              ::grammar-error Experimental
+::cue-region;        ::marker
+::part();            ::slotted()
+::placeholder;       ::spelling-error Experimental
+::selection;         ::target-text Experimental
+  </pre></div>  </div>
+
+
+  <div class="spoiler">
+    <input type="checkbox" id="q29" name="" value="">
+    <label for="q29"><span></span>  Flexbox свойство, отвечающее за перенос элементов на новую строку при переполнении?</label>
+    <div class="">
+     flex-wrap:wrap;
+    </div>  </div>
+
+
+  <div class="spoiler">
+    <input type="checkbox" id="q30" name="" value="">
+    <label for="q30"><span></span>. !important для чего используется?</label>
+    <div class="">
+  Используется для повышения приоритета селектора.
+    </div>  </div>
+
+
+<div class="spoiler">
+      <input type="checkbox" id="q31" name="" value="">
+      <label for="q31"><span></span>  Разница между script>, script async>, scrypt defer> ?</label>
+      <div class="">
+      async>,  defer  позволяют загрузить  js скрипт асинхронно <br>
+      asinc подгружает скрипты сразу не дожидаясь загрузки html последовательно выполнясь вкоде <br>
+      defer скрипты загружаются асинхронно,но последовательно
+      скрипты загружаются только после полной загрузки html
+      </div>  </div>
+
+
+  <div class="spoiler">
+    <input type="checkbox" id="q32" name="" value="">
+    <label for="q32"><span></span>  Как увеличить в размере при наведении элемент, не сдвигая соседние?</label>
+    <div class="q32but">
+      <p>button{width: 100px;height: 100px; transition: 1s all;} для плавности используем  transition: 1s  all; <br>
+      .btn:hover{transform: scale(1.5);-увеличиваем в 1.5 раза</p>
+     <button class="btn" type="button" name="button">первая кнопка</button>
+     <button type="button" name="button">вторая кнопка</button>
+    </div>  </div>
+
+<div class="spoiler">
+  <input type="checkbox" id="q33" name="" value="">
+  <label for="q33"><span></span>  Кратко о медиа запросах под мобильные приложения ?</label>
+  <div class="">
+@media screen and (min-width:1000px){p{color: yellow;} } -указываем минимальную ширину для срабатывания <br>
+Есть такой вариант:
+@media (min-width:900px)and(max-width:1100px;){ какоето действие} <br>
+@media (min-width:1000px)
+  </div>  </div>
+
+  <div class="spoiler">
+    <input type="checkbox" id="q34" name="" value="">
+    <label for="q34"><span></span>Какое свойство используется для перевода текста в заглавные или строчные буквы? </label>
+    <div class="">
+    text-transform: uppercase;  ABCDE <br>
+    text-transform:capitalize;  Abc Abc Dnb Nm <br>
+   text-transform: lowercase;  abc abc avc
+    </div>  </div>
+
+  <div class="spoiler">
+    <input type="checkbox" id="q35" name="" value="">
+    <label for="q35"><span></span>Для чего рекомендуется использовать атрибуты data?</label>
+    <div class="">
+      <pre>
+        .q35p:hover::after{
+        content: attr(data-desc);
+        background-color: lightgrey;
+        position: relative;
+        top:16px;
+        right: 50px;}
+      </pre>
+<p class="q35p" data-desc="описание чего- либо">Они предназначенны для хранения каких-либо значений, например для создания всплывающих подсказок без применения js. <br>
+    Cинтаксис: data-name (name Это название этой переменной вместо name может быть что угодно) пример: <br>
+    "div data-description="какое-то описание">  "/div></p>
+
+    </div>  </div>
+
+  <div class="spoiler">
+    <input type="checkbox" id="q36" name="" value="">
+    <label for="q36"><span></span> Как стилизовать input для загрузки файлов?</label>
+    <div class="inpq36">
+      <pre>
+Все манипуляции производим через добавление  label
+        html
+input id="iq36" type="file" name="" value="">
+label for="iq36">нажмите для загрузки< /label>
+        css
+  .inpq36 input{display: none;}
+  .inpq36 label{
+    text-align: center;
+    width: 80px;
+  height:80px;
+  background-color: green;
+  display: block;}    </pre>
+  <input id="iq36" type="file" name="" value="">
+  <label for="iq36">нажмите для загрузки</label>
+    </div>  </div>
+
+<div class="spoiler">
+  <input type="checkbox" id="q37" name="" value="">
+  <label for="q37"><span></span> Что такое селектор атрибутов? </label>
+  <div class="">
+  Синтаксис tag[atribut]
+  Предположим у нас есть 2 инпута: <br>
+  input type="text" name=""> и input type="password" name="" value=""> <br>
+  изменим у второгого border: <br>
+  в css:    input[type=password]{border: 3px dotted black}
+
+  </div>  </div>
+
+<div class="spoiler">
+  <input type="checkbox" id="q38" name="" value="">
+  <label for="q38"><span></span>Как изменить стили для кнопок с атрибутом disable?? </label>
+  <div class="btnq38">
+    <p>Нужно просто воспользоваться селектором атрибута : <br>
+    html:  button disabled>just button< /button>                                           <br>
+    css:  .btnq38 button[disabled]{background-color: pink;   }  </p>
+  <button disabled>just button</button>
+  </div>  </div>
+
+<div class="spoiler">
+  <input type="checkbox" id="q39" name="" value="">
+  <label for="q39"><span></span>Как изменить стили для элемента span, который следует прямо за элементом input? </label>
+  <div class="sq39">
+    <pre>
+      css:   .sq39 input + span{color:red; font-size: 30px;}
+      html:  div class="sq39">
+             input type="text" name="" value="">
+             span>Some text< /span>  < /div>
+    </pre>
+  <input type="text" name="" value="">
+  <span>Some text</span>
+  </div>  </div>
+
+  <div class="spoiler">
+    <input type="checkbox" id="q40" name="" value="">
+    <label for="q40"><span></span>С помощью какого селектора можно добавить стиль на каждый элемент на странице? </label>
+    <div class="">
+    *{color: red;}
+    </div>  </div>
+
+<div class="spoiler">
+  <input type="checkbox" id="q41" name="" value="">
+  <label for="q41"><span></span>Какое свойство позволяет вам спрятать элемент, но сохранить занимаемое им пространство на странице?  </label>
+  <div class="">
+    Есть 2 варианта :   <br>
+    1.  p{visibility: hiden;} или<br>
+    2.  opacity: 0; <br>
+    display:none -данный способ не подходит элемент скроется и занимаемое пространство.
+
+  </div>  </div>
+
+  <div class="spoiler">
+    <input type="checkbox" id="q42" name="" value="">
+    <label for="q42"><span></span> Как сделать тень падающую от блока? </label>
+    <div class="">
+  box-shadow: 4px 4px 6px black;
+    </div>  </div>
+
+<div class="spoiler">
+  <input type="checkbox" id="q43" name="" value="">
+  <label for="q43"><span></span> Как сделать тень падающую от текста? </label>
+  <div class="">
+  text-shadow: 2px 2px 5px red;
+  </div>  </div>
+
+<div class="spoiler">
+  <input type="checkbox" id="q44" name="" value="">
+  <label for="q44"><span></span>Как повернуть блок на 45 градусов? </label>
+  <div class="" >
+    <p>За поворот отвечает transform: rotate(); для того чтобы в двумерном пространстве были видны измененеия используем transform: rotateZ(45deg); <br>
+    помимо этого есть rotateX(); rotateY(); </p>
+    <div class="rot44">
+  <pre>
+    padding: 10px;
+    margin: 50px;
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    transform: rotateZ(45deg)</pre>
+    </div>
+  </div>  </div>
+
+<div class="spoiler">
+  <input type="checkbox" id="q45" name="" value="">
+  <label for="q45"><span></span>Как сделать вращения по осям Х и Y заметными?  </label>
+  <div class="">
+<p>Сделаем вращение начинающееся при наведении мышки
+  Для этого у родителяя надо указать глубину:<br>
+perspective: 200px;<br>
+Тот контенер который мыхотим вращать :<br></p>
+<pre>
+  .rot45{
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  transition: 1s all;
+  }
+  .rot45:hover{
+    transform: rotateY(90deg);
+</pre>
+<div class="conteinerq45">
+  <div class="rot45">
+  </div></div>
+</div></div>
+
+<div class="spoiler">
+  <input type="checkbox" id="q46" name="" value="">
+  <label for="q46"><span></span> Как сделать анимацию бесконечно повторяющейся? </label>
+  <div class="">
+   animation-duration: infinite;
+  </div>  </div>
+
+  <div class="spoiler">
+    <input type="checkbox" id="q47" name="" value="">
+    <label for="q47"><span></span> Для чего используются препроцессоры? </label>
+    <div class="">
+<p>Препроцессоры расширяют возможности стандартного css с помощью новых синтаксических конструкций <br>
+таких как переменные, вложенность миксины и многое другое</p>
+    </div>  </div>
+
+<div class="spoiler">
+    <input type="checkbox" id="q48" name="" value="">
+    <label for="q48"><span></span> Что такое миксины в препроцессорах?? </label>
+   <div class="">
+  <p>Это некий кусок css который можно переиспользывать в каких-то других селекторах</p>
+<div class="">
+  <img class="q48img" src="images/q48.png" alt="" width="100%">
+</div>
+    </div>  </div>
+    <div class="spoiler">
+      <input type="checkbox" id="q49" name="" value="">
+      <label for="q49"><span></span> Что такое bootstrap? </label>
+      <div class="">
+  Это графический фреймворк который используется для быстрой разработки адаптивных и отзывчатых интерфейсов,<br>
+  включает в себя 12-ти колоночную сетку, для того чтобы делать адаптивные сайты. И набор готовых модальных окон разлиных кнопок итд
+
+      </div>  </div>
+
+</body>
+</html>
