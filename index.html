@@ -35,7 +35,7 @@
 </div>
 <div class="spoiler">
   <input type="checkbox" id="q2" name="" value="">
-  <label for="q2"><span></span>Для чего нужно ключевое слов @keyframes</label>
+  <label for="q2"><span></span>Для чего нужно ключевое слово @keyframes</label>
   <div class="">
     <p>keyframes определяет ключевые кадры по которым будет работать анимация </p>
 <div class="table">
@@ -84,11 +84,20 @@
     <input type="checkbox" id="q4" name="" value="">
     <label for="q4"><span></span> Как бы вы реализовали кастомный чек бокс?</label>
     <div class="description">
+      css:
+      .check  input{display: none;} <br>     сам инпут мы скрываем input{opacity:0;} или display:none; 
+ .check label{ <br>
+  display: block; <br>
+  width:50px; <br>
+  height: 50px;<br>
+  border: 3px solid grey; <br>
+ background-color: black; <br>
+ border-radius:50%;} <br>
+.check input:checked + label{background-color: red;}<br>  отслеживаем нажат чекбокс или нет 
+      
       Чтобы стилизовать чекбокс создается label указывается id самого чекбокса;<br>
-      Затем для этого label пишутся стили(label:height:50px;width:50px;border-radius:50% background-color:black), <br>
-      которыми должен обладать сам чекбокс,  а сам инпут мы скрываем input{opacity:0;} или display:none; <br>
-
-      далее нам надо отслеживать нажат с=чекбокс или нет (input:checked + label{background-color: red;})
+      Затем для этого label пишутся стили, которыми должен обладать сам чекбокс,  а сам инпут мы скрываем input{opacity:0;} или display:none; <br>
+      далее нам надо отслеживать нажат ли чекбокс или нет (input:checked + label{background-color: red;})
     </div>
     <div class="check">
       <input type="checkbox" id="cb" name="" value="" > &nbsp; &nbsp; &nbsp;
@@ -457,7 +466,7 @@ label for="iq36">нажмите для загрузки< /label>
 
 <div class="spoiler">
   <input type="checkbox" id="q38" name="" value="">
-  <label for="q38"><span></span>Как изменить стили для кнопок с атрибутом disable?? </label>
+  <label for="q38"><span></span>Как изменить стили для кнопок с атрибутом disable? </label>
   <div class="btnq38">
     <p>Нужно просто воспользоваться селектором атрибута : <br>
     html:  button disabled>just button< /button>                                           <br>
